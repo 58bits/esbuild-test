@@ -1,3 +1,4 @@
+@use "../config/config" as *;
 @use '@material/select';
 
 .mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {

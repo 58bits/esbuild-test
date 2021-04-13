@@ -1,9 +1,10 @@
 const path = require('path')
 const { sassPlugin } = require('esbuild-sass-plugin');
+const esbuild = require("esbuild");
 
-require('esbuild').build({
+esbuild.build({
   entryPoints: ['./src/index.js'],
-  outdir: "build/",
+  outdir: "public/build/",
   bundle: true,
   plugins: [sassPlugin({
     type: "style", 

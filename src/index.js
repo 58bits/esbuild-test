@@ -1,4 +1,4 @@
-import './styles/index.scss'
+import './styles/style.scss'
 import { MDCSelect } from '@material/select'
 
 export default async function init() {

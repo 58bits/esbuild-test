@@ -6,26 +6,26 @@ $page-width: 650px;
 $dashboard-panel-background-color: #17243bc7;
 $dashboard-panel-border-color: #121c2ed7;
 
-@use "@material/theme" with (
-  $primary: white,
-  $secondary: #285c86,
-  $on-primary: white,
-  $on-secondary: white,
-  $background: #17243b,
-  $surface: #17243bc7,
-);
+// @use "@material/theme" with (
+//   $primary: white,
+//   $secondary: #285c86,
+//   $on-primary: white,
+//   $on-secondary: white,
+//   $background: #17243b,
+//   $surface: #17243bc7,
+// );
 
-@use '@material/button/mdc-button';
-@use '@material/button';
-@use "@material/checkbox";
-@use "@material/form-field";
-@use "@material/list/mdc-list";
-@use "@material/menu-surface/mdc-menu-surface";
-@use "@material/menu/mdc-menu";
-@use "@material/select/styles";
+// @use '@material/button/mdc-button';
+// @use '@material/button';
+// @use "@material/checkbox";
+// @use "@material/form-field";
+// @use "@material/list/mdc-list";
+// @use "@material/menu-surface/mdc-menu-surface";
+// @use "@material/menu/mdc-menu";
+// @use "@material/select/styles";
 
-@include form-field.core-styles;
-@include checkbox.core-styles;
+// @include form-field.core-styles;
+// @include checkbox.core-styles;
 
 .mdc-checkbox {
   // This is where you set your density value
