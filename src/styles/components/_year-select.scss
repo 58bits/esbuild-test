@@ -1,0 +1,30 @@
+@use '@material/select';
+
+.mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {
+  background-color: $dashboard-panel-background-color;
+}
+
+#year-selector {
+  position: relative;
+  z-index: 500;
+  h2 {
+    color: white;
+    font-size: 1.1em;
+    font-weight: 500;
+    margin: 0 0 0.3em 0;
+  }
+
+  .year-select {
+    @include select.filled-density(-2);
+    width: 200px;
+
+    .mdc-select__menu {
+      z-index: 500;
+    }
+
+    .mdc-select__anchor {
+      border-top-right-radius: 0;
+      border-top-left-radius: 0;
+    }
+  }
+}

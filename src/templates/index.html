@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+
+  <title>
+   ESBuild Test
+  </title>
+</head>
+
+<body>
+  <div id="main">
+    <div id="interactive-map-layout">
+
+      <div id="left-control-panel">
+        <figure class="highcharts-figure" id="chart-01">
+          <h2>Gender of Participants</h2>
+          <div class="highcharts-figure-content">
+            <div id="highcharts-container-01"></div>
+          </div>
+        </figure>
+
+        <figure class="highcharts-figure" id="chart-02">
+          <h2>Type of Activity</h2>
+          <div class="highcharts-figure-content">
+            <div id="highcharts-container-02"></div>
+          </div>
+        </figure>
+
+        <figure class="highcharts-figure" id="chart-03">
+          <h2>Activities by Service Area</h2>
+          <div class="highcharts-figure-content">
+            <div id="highcharts-container-03"></div>
+          </div>
+        </figure>
+
+      </div>
+
+      <div id="right-control-panel">
+
+        <div id="fast-facts">
+          <h2>Fast Facts</h2>
+          <div class="fast-facts">
+            <div class="fast-fact participants">
+              <span class="text">Participants</span>
+              <span id="fast-fact-particpants-total" class="number">0</span>
+            </div>
+            <div class="fast-fact activitites">
+              <span class="text">Activities</span>
+              <span id="fast-fact-activities-total" class="number">0</span>
+            </div>
+          </div>
+        </div>
+
+        <div id="country-checkboxes">
+          <h2>Countries</h2>
+          <div class="country-checkboxes-list">
+            <div class="mdc-form-field">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="country-checkbox mdc-checkbox__native-control" id="KH" value="KH" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="KH">Cambodia</label>
+            </div>
+
+            <div class="mdc-form-field">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="country-checkbox mdc-checkbox__native-control" id="LA" value="LA" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="LA">Lao PDR</label>
+            </div>
+
+            <div class="mdc-form-field">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="country-checkbox mdc-checkbox__native-control" id="MM" value="MM" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="MM">Myanmar</label>
+            </div>
+
+            <div class="mdc-form-field">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="country-checkbox mdc-checkbox__native-control" id="TH" value="TH" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="TH">Thailand</label>
+            </div>
+
+            <div class="mdc-form-field">
+              <div class="mdc-checkbox">
+                <input type="checkbox" class="country-checkbox mdc-checkbox__native-control" id="VN" value="VN" />
+                <div class="mdc-checkbox__background">
+                  <svg class="mdc-checkbox__checkmark" viewBox="0 0 24 24">
+                    <path class="mdc-checkbox__checkmark-path" fill="none" d="M1.73,12.91 8.1,19.28 22.79,4.59" />
+                  </svg>
+                  <div class="mdc-checkbox__mixedmark"></div>
+                </div>
+                <div class="mdc-checkbox__ripple"></div>
+              </div>
+              <label for="VN">Viet Nam</label>
+            </div>
+          </div>
+          <div class="country-reset-control">
+            <a id="country-reset" href="#">Reset All</a>
+          </div>
+        </div>
+
+        <div id="year-selector">
+          <h2>Year</h2>
+          <div class="mdc-select mdc-select--filled year-select">
+            <div class="mdc-select__anchor" role="button" aria-haspopup="listbox" aria-expanded="false"
+              aria-labelledby="demo-label demo-selected-text">
+              <span class="mdc-select__ripple"></span>
+              <span id="demo-label" class="mdc-floating-label">Select a year</span>
+              <span class="mdc-select__selected-text-container">
+                <span id="demo-selected-text" class="mdc-select__selected-text"></span>
+              </span>
+              <span class="mdc-select__dropdown-icon">
+                <svg class="mdc-select__dropdown-icon-graphic" viewBox="7 10 10 5" focusable="false">
+                  <polygon class="mdc-select__dropdown-icon-inactive" stroke="none" fill-rule="evenodd"
+                    points="7 10 12 15 17 10">
+                  </polygon>
+                  <polygon class="mdc-select__dropdown-icon-active" stroke="none" fill-rule="evenodd"
+                    points="7 15 12 10 17 15">
+                  </polygon>
+                </svg>
+              </span>
+              <span class="mdc-line-ripple"></span>
+            </div>
+
+            <div class="mdc-select__menu mdc-menu mdc-menu-surface mdc-menu-surface--fullwidth">
+              <ul class="mdc-list" role="listbox" aria-label="Food picker listbox">
+                <li class="mdc-list-item mdc-list-item--selected" aria-selected="true" data-value="all" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    All
+                  </span>
+                </li>
+                <li class="mdc-list-item" aria-selected="false" data-value="2021" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    2021
+                  </span>
+                </li>
+                <li class="mdc-list-item" aria-selected="false" data-value="2020" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    2020
+                  </span>
+                </li>
+                <li class="mdc-list-item" aria-selected="false" data-value="2019" role="option">
+                  <span class="mdc-list-item__ripple"></span>
+                  <span class="mdc-list-item__text">
+                    2019
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div id="map"></div>
+    </div>
+  </div>
+</body>
+
+</html>
