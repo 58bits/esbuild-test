@@ -9,6 +9,7 @@ esbuild.build({
   plugins: [sassPlugin({
     type: "style", 
     includePaths: [
+      path.resolve(__dirname, "@material/feature-targeting"),
       path.resolve(__dirname, "@material/theme"),
       path.resolve(__dirname, "@material/button"),
       path.resolve(__dirname, "@material/checkbox"),
