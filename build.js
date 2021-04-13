@@ -6,6 +6,9 @@ esbuild.build({
   entryPoints: ['./src/index.js'],
   outdir: "public/build/",
   bundle: true,
+  minify: false,
+  sourcemap: true,
+  format: "esm",
   plugins: [sassPlugin({
     type: "style", 
     includePaths: [
@@ -20,7 +23,6 @@ esbuild.build({
       path.resolve(__dirname, "@material/select"),
     ] 
   })],
-  sourcemap: true,
   //this stops esbuild from trying to resolve these things in css, may need to add more types
   external: ["*.svg", "*.woff", "*.css", "*.jpg", "*.png"],
   watch: {
