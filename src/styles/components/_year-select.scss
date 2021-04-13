@@ -1,5 +1,5 @@
 @use "../config/config" as *;
-@use '@material/select';
+@use '~@material/select';
 
 .mdc-select--filled:not(.mdc-select--disabled) .mdc-select__anchor {
   background-color: $dashboard-panel-background-color;
