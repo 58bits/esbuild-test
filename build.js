@@ -10,6 +10,7 @@ esbuild.build({
   sourcemap: true,
   format: "esm",
   plugins: [sassPlugin({
+    // Enabling type: "style" will embed all css in a <style> tag
     // type: "style", 
     includePaths: [
       path.resolve(__dirname, "node_modules"),
