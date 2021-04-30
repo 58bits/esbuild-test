@@ -6,21 +6,13 @@ esbuild.build({
   entryPoints: ['./src/index.js'],
   outdir: "public/build/",
   bundle: true,
-  minify: false,
+  minify: true,
   sourcemap: true,
   format: "esm",
   plugins: [sassPlugin({
-    type: "style", 
+    // type: "style", 
     includePaths: [
-      path.resolve(__dirname, "@material/feature-targeting"),
-      path.resolve(__dirname, "@material/theme"),
-      path.resolve(__dirname, "@material/button"),
-      path.resolve(__dirname, "@material/checkbox"),
-      path.resolve(__dirname, "@material/form-field"),
-      path.resolve(__dirname, "@material/list"),
-      path.resolve(__dirname, "@material/menu-surface"),
-      path.resolve(__dirname, "@material/menu"),
-      path.resolve(__dirname, "@material/select"),
+      path.resolve(__dirname, "node_modules"),
     ] 
   })],
   //this stops esbuild from trying to resolve these things in css, may need to add more types
